@@ -3,5 +3,5 @@
 ## Require
 
 
-1. ## Installation d'Ionic
+## 1. Installation d'Ionic
 
