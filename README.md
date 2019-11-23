@@ -2,11 +2,42 @@
 
 ## Require
 
+__Pour l'installation :__
+  - [x] NodeJS
+  - [x] npm
+  
+__Environnement de développement :__
 
-## 1. Installation d'Ionic
+__Languages et/ou compétences__
+  - [x] Angular
+  - [x] HTML
+  - [x] CSS
+  
+## Installation d'Ionic
 
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+Le lien d'installation vers le site d'ionic : https://ionicframework.com/docs/installation/cli
+
+### Installation
+```
+npm install -g ionic
+```
+### Création d'un projet
+
+Les différent templates de projet de base :
+
+![GitHub Logo](ionic_project.PNG)
+
+Nous choississons de créer un projet vide pour ce tutoriel.
+```
+npm install -g ionic
+```
+### Lancement du projet
+```
+cd myApp
+ionic serve
+```
+
+## Environnement de développement
 
 I think you should use an
 `<addr>` element here instead.
