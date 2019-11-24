@@ -25,17 +25,28 @@ npm install -g ionic
 
 Les différent templates de projet de base :
 
-![GitHub Logo](ionic_project.PNG)
+![IONIC Project](ionic_project.PNG)
 
 Nous choississons de créer un projet vide pour ce tutoriel.
 ```
-npm install -g ionic
+ionic start tuto
 ```
+Pour notre tutoriel nous choisirons de construire un projet angular et le template blank
+
+![Choice Project](choice_project.PNG)
+
 ### Lancement du projet
+
+On lance le projet :
+
 ```
-cd myApp
+cd tuto
 ionic serve
 ```
+
+On obtient :
+
+![Blank Project](blank_project.PNG)
 
 ## Environnement de développement
 
