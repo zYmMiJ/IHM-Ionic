@@ -1,7 +1,25 @@
 # IHM-Ionic
 
 ## Sommaire
-### Routing
+
+- [Installation](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#installation-dionic)
+
+  - [Installation d'un projet](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#installation)
+  
+  - [Création d'un projet](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#cr%C3%A9ation-dun-projet)
+
+  - [Lancement d'un projet](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#lancement-du-projet)
+
+- [Création d'une application](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#cr%C3%A9ation-dune-application-todolist)
+  
+  - [Création d'une page](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#g%C3%A9n%C3%A9ration-dune-page)
+
+  - [Création d'un composant](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#g%C3%A9n%C3%A9ration-dune-page)
+  
+  - [Création d'un module](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#g%C3%A9n%C3%A9ration-dune-page)
+
+
+- [Rooting](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#routing)
 ## Require
 
 __Pour l'installation :__
@@ -53,9 +71,9 @@ On obtient :
 ## Environnement de développement
 https://ionicframework.com/docs/components
 
-## Création d'une applcation (todolist)
+## Création d'une application (todolist)
 
-### Génération d'une page
+### Création d'une page
 
 On génère une page :
 
@@ -68,6 +86,12 @@ Il est conseillé de regrouper ces pages dans un seul et même dossier.
 ![Create Page](create_pages.PNG)
 
 Pour cela on déplacera notre page Home dans pages.
+
+### Création d'un composant
+
+### Création d'un module
+
+#### Partage de composant
 
 ### Routing
 
