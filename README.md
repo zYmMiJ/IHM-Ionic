@@ -16,10 +16,13 @@
 
   - [Création d'un composant](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#g%C3%A9n%C3%A9ration-dune-page)
   
-  - [Création d'un module](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#g%C3%A9n%C3%A9ration-dune-page)
+  - [Création d'un module](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#cr%C3%A9ation-dun-module)
+  
+     - [Partage de composant](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#partage-de-composant)
 
-
-- [Rooting](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#routing)
+  - [Rooting](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#routing)
+  
+  
 ## Require
 
 __Pour l'installation :__
