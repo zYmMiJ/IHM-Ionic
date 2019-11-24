@@ -69,7 +69,37 @@ Pour cela on déplacera notre page Home dans pages.
 
 ### Routing
 
-Ionic comporte une multitude composant de base
+Pour IONIC 5:Angular il est conseiller de d'utliser Angular rooter : https://angular.io/guide/router.
+
+La définition des routes se fait dans le fichier app-rooting.module.ts .
+
+Lors de la création d'une page une route est créer automatiquement, comme ici pour notre pagre list/create :
+
+![Create Page](routes.PNG)
+
+Pour accéder à notre page il suffit d'ajouter à une balise :
+
+![Create Page](route_balise.PNG)
+
+### Composants Graphiques
+
+Ionic comporte une multitude de composant de base que vous pouvez retrouver ici : https://ionicframework.com/docs/components . Cette doc renseigne aussi les différentes propriétés, events, methods, personnalisation css etc... et un exemple d'usage d'un composant.
+
+Dans le cadre de notre application nous allons tout d'abord créer un bouton pour accéder à la page création d'une liste.
+
+Nous utiliserons un "floationg button action" (ion-fab).
+
+Dans `pages/home/home.page.html`, vous ajouterez ce bouton :
+
+```html
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/create" routerLinkActive="active">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+```
 
 I think you should use an
 `<addr>` element here instead.
