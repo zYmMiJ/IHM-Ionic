@@ -19,8 +19,16 @@
   - [Création d'un module](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#cr%C3%A9ation-dun-module)
   
      - [Partage de composant](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#partage-de-composant)
+     
+  - [Création d'un service](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#cr%C3%A9ation-dun-service)
 
   - [Rooting](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#routing)
+  
+  - [Theming](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#theming)
+
+- [Build](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#build)
+
+  - [Android](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#android)
   
   
 ## Require
@@ -71,8 +79,6 @@ On obtient :
 
 ![Blank Project](blank_project.PNG)
 
-## Environnement de développement
-https://ionicframework.com/docs/components
 
 ## Création d'une application (todolist)
 
@@ -96,6 +102,8 @@ Pour cela on déplacera notre page Home dans pages.
 
 #### Partage de composant
 
+### Création d'un service
+
 ### Routing
 
 Pour IONIC 5:Angular il est conseiller de d'utliser Angular rooter : https://angular.io/guide/router.
@@ -109,6 +117,9 @@ Lors de la création d'une page une route est créer automatiquement, comme ici 
 Pour accéder à notre page il suffit d'ajouter à une balise :
 
 ![Create Page](route_balise.PNG)
+
+### Theming
+
 
 ### Composants Graphiques
 
@@ -152,3 +163,7 @@ First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
+
+## Build
+
+### Android
