@@ -49,6 +49,27 @@ On obtient :
 ![Blank Project](blank_project.PNG)
 
 ## Environnement de développement
+https://ionicframework.com/docs/components
+
+## Création d'une applcation (todolist)
+
+### Génération d'une page
+
+On génère une page :
+
+```
+ionic generate page pages/list/create
+```
+
+Il est conseillé de regrouper ces pages dans un seul et même dossier.
+
+![Create Page](create_pages.PNG)
+
+Pour cela on déplacera notre page Home dans pages.
+
+### Routing
+
+Ionic comporte une multitude composant de base
 
 I think you should use an
 `<addr>` element here instead.
