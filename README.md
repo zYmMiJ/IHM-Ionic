@@ -98,6 +98,18 @@ Pour cela on déplacera notre page Home dans pages.
 
 ### Création d'un composant
 
+Un composant est blablabal
+
+Notre application comportera différents composants :
+
+```
+ionic generate component components/side-menu
+```
+
+On obtient en finale ceci :
+
+![Composants](all_composants_files.PNG)
+
 ### Création d'un module
 
 #### Partage de composant
