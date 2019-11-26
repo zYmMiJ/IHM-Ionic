@@ -1,0 +1,25 @@
+<!-- Back button with custom text and icon -->
+<ion-header>
+  <ion-toolbar> 
+    <ion-title>Création</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Nom de la tache</ion-label>
+    <ion-input></ion-input>
+  </ion-item>          
+  <ion-item>
+    <ion-label position="floating">Param 2</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+</ion-content>

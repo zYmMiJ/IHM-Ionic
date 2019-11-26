@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons (click)="click()" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>HomeSS</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+
+<app-side-menu></app-side-menu>
+
+<ion-content>
+  <ion-button expand="block" (click)="openModal()">Créer Liste</ion-button>
+  <ion-title>Nom Liste</ion-title>
+  <app-tasks></app-tasks> 
+  <!-- Bouton ajout d'une nouvelle tache -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" color="primary" routerLink="/createTask" routerLinkActive="active">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button> 
+  </ion-fab>
+</ion-content>
+
+
+<ion-footer>
+  <ion-item>
+    <ion-label vertical="bottom" color="primary" position="floating">Ajouter Rapide Tache</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-footer>
+

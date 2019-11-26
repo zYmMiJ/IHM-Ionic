@@ -1,0 +1,28 @@
+<ion-menu (ionDidOpen)="menuOpened()" side="start" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Mes listes</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+       
+    <ion-list lines="none">
+          
+      <ion-item lines="full" *ngFor="let listname of listnames; let i = index">
+        <ion-title>{{listname.name}}</ion-title>
+        <ion-button (click)="remove(i)" color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Option 1</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Option 2</ion-label>
+      </ion-item>
+      
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>

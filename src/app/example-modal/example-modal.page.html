@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>example-modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+  <ion-content fullscreen>
+    <form (onsubmit)="processForm(event)">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="stacked">Nom de Liste<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required value="" type="text" (ionInput)="handleListNameValue($event)"></ion-input>
+        </ion-item>
+      </ion-list>
+    </form>
+
+    <div class="ion-padding">
+      <ion-button (click)="confirmForm()"  expand="block" type="submit" class="ion-no-margin">Créer Liste</ion-button>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button (click)="removeAll()" expand="block" type="submit" color="danger" class="ion-no-margin">removeAll</ion-button>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button (click)="view()" expand="block" type="submit" color="success" class="ion-no-margin">View</ion-button>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button (click)="dismissModal()" expand="block" type="submit" color="warning" class="ion-no-margin">Close</ion-button>
+    </div>
+
+</ion-content>

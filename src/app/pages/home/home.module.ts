@@ -6,18 +6,23 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+// Les Modules Persos
+
+// Les composants Persos
+import { SideMenuComponent } from '../../components/side-menu/side-menu.component';
+import { TasksComponent } from '../../components/tasks/tasks.component';
+
+
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage
-      }
-    ])
+    RouterModule.forChild([{ path: '', component: HomePage }])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,SideMenuComponent,TasksComponent],
+  providers: [SideMenuComponent]
 })
 export class HomePageModule {}
