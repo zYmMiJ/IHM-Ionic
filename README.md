@@ -193,7 +193,21 @@ Remplacer le code html présent dans `tasks/create/create.page.html` par :
 ```
 Vous obtenez ceci :
 
+![Back](route_back.PNG)
 
+#### Modal Page
+
+Pour accéder à notre modal page créer auparavant, nous créons un bouton qui lancera cette modal Page.
+
+Copiez ce code dans le content de `pages/homt/home.html` :
+
+```html
+  <ion-button expand="block" (click)="openModal()">Créer Liste</ion-button>
+```
+
+Comme vous pouvez le voir on déclare un event click qui lancera une fonction openModal().
+
+les imports 
 ### Theming
 
 
