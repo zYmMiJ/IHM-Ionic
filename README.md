@@ -181,7 +181,7 @@ Remplacer le code html présent dans `tasks/create/create.page.html` par :
 <!-- Back button with custom text and icon -->
 <ion-header>
   <ion-toolbar> 
-    <ion-title>Création</ion-title>
+    <ion-title>Création de tâches</ion-title>
     <ion-buttons slot="start">
       <ion-back-button
           [text]="buttonText"
