@@ -96,6 +96,12 @@ Il est conseillé de regrouper ces pages dans un seul et même dossier.
 
 Pour cela on déplacera notre page Home dans pages.
 
+Puis pour la suite de ce tuto nous créons  d'autres pages:
+
+```
+ionic generate page pages/tasks/create
+``` 
+
 ### Création d'un composant
 
 Un composant est blablabal
@@ -110,17 +116,25 @@ On obtient en finale ceci :
 
 ![Composants](all_composants_files.PNG)
 
+Pour la suite de ce tuto nous créons d'autres components :
+
+```
+ionic generate component components/tasks
+```
+
 ### Création d'un module
 
 #### Partage de composant
 
 ### Création d'un service
 
+### Création d'une modal Page
+
 ### Routing
 
 Pour IONIC 5:Angular il est conseiller de d'utliser Angular rooter : https://angular.io/guide/router.
 
-La définition des routes se fait dans le fichier app-rooting.module.ts .
+La définition des routes se fait dans le fichier `app-rooting.module.ts` .
 
 Lors de la création d'une page une route est créer automatiquement, comme ici pour notre pagre list/create :
 
@@ -129,6 +143,56 @@ Lors de la création d'une page une route est créer automatiquement, comme ici 
 Pour accéder à notre page il suffit d'ajouter à une balise :
 
 ![Create Page](route_balise.PNG)
+
+### TodoList
+
+Une fois toutes nos pages,modules,services,composants créés, la structure de notre projet est celle-ci:
+
+![Project Structure](project_structure.PNG)
+
+#### Navigation vers une autre page
+
+Dans `pages/home/home.page.html`, vous ajouterez ce bouton :
+
+```html
+<ion-content>
+  
+  <!-- Bouton ajout d'une nouvelle tache -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" color="primary" routerLink="/createTask" routerLinkActive="active">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button> 
+  </ion-fab>
+  
+</ion-content>
+```
+
+Ce bouton doit vous renvoyer vers la page `create\tasks`, cependant cela ne fonctionne pas il faut modifier la route par défaut.
+
+Modifiez cette route dans `app-rooting.module.ts` comme ceci :
+
+![Route Modification](route_modification.PNG)
+
+Ionic fournit aussi des outils de navigation comme le retour arrière.
+
+Remplacer le code html présent dans `tasks/create/create.page.html` par : 
+
+```html
+<!-- Back button with custom text and icon -->
+<ion-header>
+  <ion-toolbar> 
+    <ion-title>Création</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+          [text]="buttonText"
+          [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+```
+Vous obtenez ceci :
+
 
 ### Theming
 
@@ -141,17 +205,9 @@ Dans le cadre de notre application nous allons tout d'abord créer un bouton pou
 
 Nous utiliserons un "floationg button action" (ion-fab).
 
-Dans `pages/home/home.page.html`, vous ajouterez ce bouton :
 
-```html
-<ion-content>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button routerLink="/create" routerLinkActive="active">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-</ion-content>
-```
+
+
 
 I think you should use an
 `<addr>` element here instead.
