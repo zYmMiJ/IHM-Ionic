@@ -130,6 +130,20 @@ ionic generate component components/tasks
 
 ### Création d'une modal Page
 
+Création d'une page modal :
+
+```
+ionic g page example-modal
+```
+
+Ajouter dans `app.module.ts` dans imports :
+
+`import { ExampleModalPageModule } from './example-modal/example-modal.module';`
+
+et dans @NgModule imports : []
+
+`ExampleModalPageModule`
+
 ### Routing
 
 Pour IONIC 5:Angular il est conseiller de d'utliser Angular rooter : https://angular.io/guide/router.
