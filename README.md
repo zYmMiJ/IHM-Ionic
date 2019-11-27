@@ -221,7 +221,56 @@ Copiez ce code dans le content de `pages/homt/home.html` :
 
 Comme vous pouvez le voir on déclare un event click qui lancera une fonction openModal().
 
-les imports 
+Dans `pages/home/home.ts` ajoutez :
+
+```typescript
+export class HomePage {
+
+  dataReturned: any;
+
+  constructor(public modalController: ModalController) {}
+
+  async openModal() {
+
+    const modal = await this.modalController.create({
+      component: ExampleModalPage,
+    });
+  
+    modal.onDidDismiss().then((dataReturned) => {
+      if (dataReturned !== null) {
+        this.dataReturned = dataReturned.data;
+        //alert('Modal Sent Data :'+ dataReturned);
+      }
+    });
+ 
+    return await modal.present();
+  }
+
+}
+```
+
+Puis dans `example-modal/example-modal.html` :
+
+```html
+  <div class="ion-padding">
+    <ion-button (click)="dismissModal()" expand="block" type="submit" color="warning" class="ion-no-margin">Close</ion-button>
+  </div>
+```
+
+et dans `example-modal/example-modal.ts`:
+
+```typescript
+constructor(private modalCtrl:ModalController) {}
+```
+
+```typescript
+    dismissModal() {
+      this.modalCtrl.dismiss({
+        'dismissed': true
+      });
+    }
+```
+
 ### Theming
 
 
