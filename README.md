@@ -87,19 +87,19 @@ On obtient :
 On génère une page :
 
 ```
-ionic generate page pages/list/create
+ionic generate page pages/tasks/create
 ```
 
 Il est conseillé de regrouper ces pages dans un seul et même dossier.
 
 ![Create Page](create_pages.PNG)
 
-Pour cela on déplacera notre page Home dans pages.
+Pour cela on déplacera notre page Home dans pages comme ci-dessus.
 
 Puis pour la suite de ce tuto nous créons  d'autres pages:
 
 ```
-ionic generate page pages/tasks/create
+
 ``` 
 
 ### Création d'un composant
