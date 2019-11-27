@@ -140,7 +140,7 @@ Ajouter dans `app.module.ts` dans imports :
 
 `import { ExampleModalPageModule } from './example-modal/example-modal.module';`
 
-et dans @NgModule imports : []
+et en dernier dans @NgModule imports : []
 
 `ExampleModalPageModule`
 
