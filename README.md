@@ -249,6 +249,10 @@ export class HomePage {
 }
 ```
 
+On obtient:
+
+![Modal](modal.PNG)
+
 Puis dans `example-modal/example-modal.html` :
 
 ```html
@@ -270,6 +274,10 @@ constructor(private modalCtrl:ModalController) {}
       });
     }
 ```
+
+On obtient:
+
+![OpenModal](openmodal.PNG)
 
 ### Theming
 
