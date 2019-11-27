@@ -279,6 +279,21 @@ On obtient:
 
 ![OpenModal](openmodal.PNG)
 
+#### Ionic data storage
+
+Installation du plugin cordova :
+
+```
+ionic cordova plugin add cordova-sqlite-storage
+```
+
+Installation du package :
+
+```
+npm install --save @ionic/storage
+```
+
+Dans ``
 ### Theming
 
 
