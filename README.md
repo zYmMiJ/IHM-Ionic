@@ -450,7 +450,7 @@ et importez le:
 
 On obtient:
 
-![Modal](modalPage.PNG)
+![Modal](ModalPage.PNG)
 
 Nous voulons maintenant afficher nos listes créer dans notre side-menu.
 
