@@ -397,15 +397,25 @@ Puis les fonctions suivantes :
   }
 ```
 
-Dans le html `example/example.page.html` ajoutez les boutons suivants :
+Dans le html `example/example.page.html` ajoutez les boutons et le formulaires suivants suivants :
 
 ```html
+
+  <form>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Nom de Liste<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required value="" type="text" (ionInput)="handleListNameValue($event)"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+
   <div class="ion-padding">
-    <ion-button (click)="confirmForm()"  expand="block" type="submit" class="ion-no-margin">Créer Liste</ion-button>
+    <ion-button (click)="AddList()"  expand="block" type="submit" class="ion-no-margin">Créer Liste</ion-button>
   </div>
   
   <div class="ion-padding">
-    <ion-button (click)="removeAll()" expand="block" type="submit" color="danger" class="ion-no-margin">removeAll</ion-button>
+    <ion-button (click)="removeAllList()" expand="block" type="submit" color="danger" class="ion-no-margin">removeAll</ion-button>
   </div>
 
   <div class="ion-padding">
@@ -434,43 +444,83 @@ On obtient:
 
 ![Modal](modalPage.PNG)
 
+Nous voulons maintenant afficher nos listes créer dans notre side-menu.
+
+Ajoutez ceci dans vontre content de `side-menu/side-menu.component.html`:
+
+```html
+  <ion-content>
+       
+      <ion-item lines="full" *ngFor="let listname of listnames; let i = index">
+        <ion-title>{{listname.name}}</ion-title>
+      </ion-item>
+
+  </ion-content>
+```
+
+La fonction qui rafraichira nos listes dans `side-menu/side-meu.component.ts`:
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
+@Component({
+  selector: 'app-side-menu',
+  templateUrl: './side-menu.component.html',
+  styleUrls: ['./side-menu.component.scss'],
+})
+export class SideMenuComponent implements OnInit {
+
+  listnames: any = [];
+  
+  constructor(private storage: Storage) { }
+
+  ngOnInit() {}
+
+  menuOpened() {
+    console.log("OnOpen");
+    this.storage.get('Listname').then((val) => {
+      if ( val != null ){
+        var tmp:any[] = new Array();
+        tmp = val;
+        this.listnames = val;
+      }else{
+        this.listnames = new Array();
+      }
+    });
+  }
+}
+
+```
+
+Pour supprimer une liste ajoutez la fonction:
+```typescript
+  remove(i){
+    console.log('remove :'+i);
+    console.log(this.listnames[i]);
+    this.listnames.splice(i,1);  
+    this.storage.set('Listname', this.listnames);
+  }
+```
+
+et le button suivant:
+
+```html
+        <ion-item lines="full" *ngFor="let listname of listnames; let i = index">
+          <ion-title>{{listname.name}}</ion-title>
+          <ion-button (click)="remove(i)" color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+        </ion-item>
+```
+
+Visullement on obtient ceci:
+
+![Listes](Listes.PNG)
+
 ### Theming
 
 
 ### Composants Graphiques
 
 Ionic comporte une multitude de composant de base que vous pouvez retrouver ici : https://ionicframework.com/docs/components . Cette doc renseigne aussi les différentes propriétés, events, methods, personnalisation css etc... et un exemple d'usage d'un composant.
-
-Dans le cadre de notre application nous allons tout d'abord créer un bouton pour accéder à la page création d'une liste.
-
-Nous utiliserons un "floationg button action" (ion-fab).
-
-
-
-
-
-I think you should use an
-`<addr>` element here instead.
-
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-
-
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
 
 ## Build
 
