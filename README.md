@@ -293,7 +293,20 @@ Installation du package :
 npm install --save @ionic/storage
 ```
 
-Dans ``
+Dans `example-modal/example-modal.page.ts` : 
+
+Déclarez dans la classe :
+
+```typescript
+  listName : string;
+  listObj : any = [];
+```
+
+Puis :
+
+```typescript
+```
+
 ### Theming
 
 
