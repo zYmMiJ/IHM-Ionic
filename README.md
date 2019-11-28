@@ -104,23 +104,67 @@ Puis pour la suite de ce tuto nous créons  d'autres pages:
 
 ### Création d'un composant
 
-Un composant est blablabal
 
 Notre application comportera différents composants :
 
 ```
 ionic generate component components/side-menu
-```
-
-On obtient en finale ceci :
-
-![Composants](all_composants_files.PNG)
-
-Pour la suite de ce tuto nous créons d'autres components :
-
-```
 ionic generate component components/tasks
 ```
+
+Nous créons un composant ionic side-menu :
+
+Dans `side-menu\side-menu.component.html` remplacer le code existant par:
+
+```html
+<ion-menu side="start">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Mes listes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+       
+    <ion-list lines="none">
+    </ion-list>
+    
+  </ion-content>
+
+</ion-menu>
+<ion-router-outlet main></ion-router-outlet>
+```
+
+Nous le déclarons dans notre `home/home.module.ts` :
+
+```typescript
+declarations: [HomePage,SideMenuComponent]
+```
+
+Nous pouvons ainsi utiliser dans notre `home/home.page.html` le selecteur :
+
+```html
+<app-side-menu></app-side-menu>
+```
+
+et ajouter le bouton, dans la toolbar du header:
+
+```html
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+```
+On obtient en finale ceci :
+
+![Composants](side_menu.PNG)
 
 ### Création d'un module
 
