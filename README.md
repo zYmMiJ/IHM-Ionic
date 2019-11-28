@@ -213,7 +213,7 @@ Vous obtenez ceci :
 
 Pour accéder à notre modal page créer auparavant, nous créons un bouton qui lancera cette modal Page.
 
-Copiez ce code dans le content de `pages/homt/home.html` :
+Copiez ce code dans le content de `pages/home/home.page.html` :
 
 ```html
   <ion-button expand="block" (click)="openModal()">Créer Liste</ion-button>
@@ -295,6 +295,10 @@ npm install --save @ionic/storage
 
 Dans `example-modal/example-modal.page.ts` : 
 
+Importez:
+
+`import { Storage } from '@ionic/storage';`
+
 Déclarez dans la classe :
 
 ```typescript
@@ -302,10 +306,89 @@ Déclarez dans la classe :
   listObj : any = [];
 ```
 
-Puis :
+Ajouter dans le constructor:
 
 ```typescript
+ constructor(private storage: Storage,private modalCtrl:ModalController)
 ```
+
+Puis les fonctions suivantes :
+
+```typescript
+
+  handleListNameValue(event) {
+    console.log("ListName :");
+    console.log(event.target.value);
+    this.listName = event.target.value;
+  }
+
+  AddList(){
+    this.storage.get('Listname').then((val) => {
+      console.log('Get de la BDD :', val);
+      if ( val != null ){
+        var tmp:any[] = new Array();
+        tmp = val;
+        this.listObj = tmp;
+      }else{
+        this.listObj = new Array();
+      }
+      this.listObj.push({ name : this.listName });
+      // set a key/value
+      this.storage.set('Listname', this.listObj);
+    });
+    this.dismissModal();
+  }
+
+  removeAllList(){
+    this.storage.remove('Listname');
+  }
+
+  view(){
+    this.storage.get('Listname').then((val) => {
+      console.log('Get de la BDD :', val);
+      var tmp:any[] = new Array();
+      tmp = val;
+      this.listObj = tmp;
+    });
+  }
+```
+
+Dans le html `example/example.page.html` ajoutez les boutons suivants :
+
+```html
+  <div class="ion-padding">
+    <ion-button (click)="confirmForm()"  expand="block" type="submit" class="ion-no-margin">Créer Liste</ion-button>
+  </div>
+  
+  <div class="ion-padding">
+    <ion-button (click)="removeAll()" expand="block" type="submit" color="danger" class="ion-no-margin">removeAll</ion-button>
+  </div>
+
+  <div class="ion-padding">
+    <ion-button (click)="view()" expand="block" type="submit" color="success" class="ion-no-margin">View</ion-button>
+  </div>
+```
+
+Dans `app.module.ts` :
+
+Déclarez l'import :
+
+```typescript
+import { IonicStorageModule } from '@ionic/storage';
+```
+
+et importez le:
+
+```typescript
+  IonicStorageModule.forRoot({
+    name: '__mydb',
+    driverOrder: ['indexeddb', 'sqlite', 'websql']
+  }),
+```
+
+On obtient:
+
+![Modal](modalPage.PNG)
 
 ### Theming
 
