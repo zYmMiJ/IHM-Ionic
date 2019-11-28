@@ -21,6 +21,14 @@
      - [Partage de composant](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#partage-de-composant)
      
   - [Création d'un service](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#cr%C3%A9ation-dun-service)
+  
+      - [Navigation vers une autre page](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#navogation-vers-une-autre-page)
+      
+      - [Modal Page](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#modal-page)
+      
+      - [Ionic Data Storage](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#ionic-data-storage)
+  
+  - [TodoList](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#todolist)
 
   - [Rooting](https://github.com/zYmMiJ/IHM-Ionic/blob/master/README.md#routing)
   
@@ -206,7 +214,7 @@ Pour accéder à notre page il suffit d'ajouter à une balise :
 
 Une fois toutes nos pages,modules,services,composants créés, la structure de notre projet est celle-ci:
 
-![Project Structure](project_structure.PNG)
+![Projet Structure](projet_structure.PNG)
 
 #### Navigation vers une autre page
 
